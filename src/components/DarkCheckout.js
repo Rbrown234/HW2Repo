@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-function Checkout(props) {
+function DarkCheckout(props) {
   function sum(nums) {
     return nums.reduce(function (a, b) {
       return a + b;
@@ -35,10 +35,13 @@ function Checkout(props) {
   return (
     <div className="Checkout">
       <ol>{lineItemEls}</ol>
-      <div>Total Price: ${total.toFixed(2)} </div>
       <div>
-        <input type="checkbox" />I agree to be billed ${total.toFixed(2)} and
-        solemly swear to adhere to law of no backsies
+        Total Price: ${total.toFixed(2)}{" "}
+        <small>Shipping and Handling: ${(total * 4).toFixed(2)}</small>
+      </div>
+      <div>
+        <input type="checkbox" />I agree to be billed ${(total * 5).toFixed(2)}{" "}
+        and solemly swear to adhere to law of no backsies
       </div>
       <div>
         <input type="checkbox" />I accept the
@@ -49,4 +52,4 @@ function Checkout(props) {
   );
 }
 
-export default Checkout;
+export default DarkCheckout;

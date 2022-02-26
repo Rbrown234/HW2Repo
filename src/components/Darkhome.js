@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-//import "./Homepage.css";
+import "./Homepage.css";
 import config from "../config";
 import Product from "./Product";
 
@@ -26,7 +26,7 @@ function Darkhome(props) {
         </ul>
       </nav>
       <div className="Homepage-products">{fishEls}</div>
-      <Link to="/checkout">Checkout</Link>
+      <Link to="/Darkcheckout">Checkout</Link>
     </div>
   );
 }

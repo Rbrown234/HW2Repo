@@ -1,11 +1,12 @@
 import "./App.css";
 import { useState } from "react";
-import { Link, BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Link, HashRouter as Router, Route, Routes } from "react-router-dom";
 import Homepage from "./components/Homepage";
 import Checkout from "./components/Checkout";
 import config from "./config";
 import ToS from "./components/ToS.jsx";
-//import Darkhome from "./src/componenet/Darkhome";
+import Darkhome from "./components/Darkhome";
+import DarkCheckout from "./components/DarkCheckout";
 
 function App() {
   function handleFishChosen(id) {
@@ -28,6 +29,14 @@ function App() {
           <Route
             path="/checkout"
             element={<Checkout chosenFish={chosenFish} />}
+          />
+          <Route
+            path="/Darkhome"
+            element={<Darkhome onFishChosen={handleFishChosen} />}
+          />
+          <Route
+            path="/Darkcheckout"
+            element={<DarkCheckout chosenFish={chosenFish} />}
           />
 
           <Route path="/ToS" element={<ToS />} />

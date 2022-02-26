@@ -4,6 +4,7 @@ import config from "../config";
 import Product from "./Product";
 
 function Homepage(props) {
+  console.log("foo");
   let fishEls = [];
   for (let myfish of config.fish) {
     fishEls.push(
